@@ -1,0 +1,70 @@
+:root {
+	/* z-index */
+	--z-loader: 1000;
+	--z-fixed-header: 900;
+	--z-mobile-nav: 800;
+	--z-mobile-nav-underlay: 700;
+	--z-page-hero-content: 300;
+	--z-page-hero-overlay: 200;
+	--z-page-hero-image: 100;
+	/* layout */
+	--header-height: 64px;
+	/* spacing */
+	--spacing-xs: 4px;
+	--spacing-sm: 8px;
+	--spacing-md: 16px;
+	--spacing-lg: 24px;
+	--spacing-xl: 32px;
+	--spacing-2xl: 40px;
+	--spacing-3xl: 48px;
+	--spacing-4xl: 56px;
+	--spacing-5xl: 64px;
+	--spacing-6xl: 72px;
+	--spacing-7xl: 80px;
+	--spacing-8xl: 88px;
+	--spacing-9xl: 96px;
+	--spacing-10xl: 108px;
+	--spacing-11xl: 124px;
+	--spacing-12xl: 136px;
+	--spacing-13xl: 148px;
+	/* border-radius */
+	--radius-xxs: 4px;
+	--radius-xs: 8px;
+	--radius-sm: 16px;
+	--radius-base: 24px;
+	--radius-md: 32px;
+	--radius-lg: 40px;
+	--radius-xl: 48px;
+	/* animation timing functions */
+	--animation-timing-fn-linear-curve: cubic-bezier(0, 0, 1, 1);
+	--animation-timing-fn-ease-in-curve: cubic-bezier(0.8, 0.2, 0.6, 1);
+	--animation-timing-fn-ease-out-curve: cubic-bezier(0.2, 0.8, 0.4, 1);
+	--animation-timing-fn-ease-in-out-curve: cubic-bezier(0.4, 0, 0.2, 1);
+	// animation speed
+	--animation-speed-slow: 600ms;
+	--animation-speed-normal: 400ms;
+	--animation-speed-fast: 200ms;
+	// motion
+	--animation-fn-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+	--animation-fn-ease-in: cubic-bezier(0.42, 0, 1, 1);
+	--animation-fn-ease-out: cubic-bezier(0.19, 0.91, 0.38, 1);
+	--animation-fn-ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+	--animation-fn-linear: cubic-bezier(0, 0, 1, 1);
+	--animation-duration-0: 0ms;
+	--animation-duration-50: 50ms;
+	--animation-duration-100: 100ms;
+	--animation-duration-150: 150ms;
+	--animation-duration-200: 200ms;
+	--animation-duration-250: 250ms;
+	--animation-duration-300: 300ms;
+	--animation-duration-350: 350ms;
+	--animation-duration-400: 400ms;
+	--animation-duration-450: 450ms;
+	--animation-duration-500: 500ms;
+	--shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+	--shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	--shadow-md: 0 4px 6px -1px var(--clr-shadow), 0 2px 4px -2px var(--clr-shadow);
+	--shadow-lg: 0 10px 15px -3px var(--clr-shadow), 0 4px 6px -4px var(--clr-shadow);
+	--shadow-xl: 0 20px 25px -5px var(--clr-shadow), 0 8px 10px -6px var(--clr-shadow);
+	--shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}

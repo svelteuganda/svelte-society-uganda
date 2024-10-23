@@ -1,0 +1,59 @@
+@use 'sass:color';
+
+:root {
+	--clr-shadow: #42424230;
+
+	/****
+    ACCENT COLORS
+  ****/
+	--clr-accent-1: #ff3e00;
+	--clr-accent-2: hsl(248, 44%, 23%);
+
+	/****
+    STATUS COLORS
+  ****/
+	--clr-error: hsl(0, 74%, 42%);
+	--clr-success: hsl(142, 72%, 29%);
+	--clr-info: hsl(221, 83%, 53%);
+	--clr-warning: hsl(41, 96%, 40%);
+
+	/****
+    BACKGROUNDS COLORS
+  ****/
+	// primary
+	--clr-bg-primary: #111317;
+	--clr-txt-primary-on-bg-primary: hsl(0, 0%, 98%);
+	--clr-txt-secondary-on-bg-primary: hsl(0, 0%, 86%);
+	--clr-border-primary-on-bg-bg-primary: hsl(0, 0%, 86%);
+	--clr-border-secondary-on-bg-bg-primary: hsl(0, 0%, 66%);
+
+	// secondary
+	--clr-bg-secondary: #21242b;
+	--clr-txt-primary-on-bg-secondary: hsl(0, 0%, 98%);
+	--clr-txt-secondary-on-bg-secondary: hsl(0, 0%, 86%);
+	--clr-border-primary-on-bg-bg-secondary: hsl(0, 0%, 86%);
+	--clr-border-secondary-on-bg-bg-secondary: hsl(0, 0%, 66%);
+
+	// accent-1
+	--clr-bg-accent-1: hsl(358, 83%, 52%);
+	--clr-txt-primary-on-bg-accent-1: hsl(0, 0%, 98%);
+	--clr-txt-secondary-on-bg-accent-1: hsl(0, 0%, 86%);
+	--clr-border-primary-on-bg-bg-accent-1: hsl(0, 0%, 86%);
+	--clr-border-secondary-on-bg-accent-1: hsl(0, 0%, 72%);
+
+	// accent-2
+	--clr-bg-accent-2: hsl(248, 44%, 23%);
+	--clr-txt-primary-on-bg-accent-2: hsl(0, 0%, 96%);
+	--clr-txt-secondary-on-bg-accent-2: hsl(0, 0%, 86%);
+	--clr-border-primary-on-bg-bg-accent-2: hsl(0, 0%, 90%);
+	--clr-border-secondary-on-bg-accent-2: hsl(0, 0%, 80%);
+}
+
+body {
+	background-color: var(--clr-bg-primary);
+	color: var(--clr-txt-primary-on-bg-primary);
+}
+
+p {
+	margin-bottom: var(--spacing-md);
+}

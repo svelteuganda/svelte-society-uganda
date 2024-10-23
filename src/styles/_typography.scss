@@ -1,0 +1,76 @@
+@use './utils';
+
+:root {
+	// font-family
+	--ff-display: 'Ubuntu', serif;
+	--ff-mono: monospace;
+	--ff-sans: 'Montserrat', Helvetica, Arial, sans-serif;
+
+	--ff-headings: 'Ubuntu', serif;
+	--ff-body: 'Montserrat', Helvetica, Arial, sans-serif;
+
+	// font-size
+	font-size: 62.5%;
+	--fs-xs: 1rem;
+	--fs-sm: 1.2rem;
+	--fs-base: 1.4rem;
+	--fs-md: 1.8rem;
+	--fs-lg: 2.4rem;
+	--fs-xl: 3.2rem;
+	--fs-2xl: 4rem;
+	--fs-3xl: 4.8rem;
+
+	@include utils.respond-to('lg-screens') {
+		--fs-xs: 1.4rem;
+		--fs-sm: 1.6rem;
+		--fs-base: 1.8rem;
+		--fs-md: 2.4rem;
+		--fs-lg: 3.2rem;
+		--fs-xl: 4rem;
+		--fs-2xl: 4.8rem;
+		--fs-3xl: 5.6rem;
+	}
+
+	@supports (font-size: clamp(1.6rem, 1.536rem + 0.18vw, 1.8rem)) {
+		--fs-xs: clamp(1rem, 1.136rem + 0.18vh, 1.2rem);
+		--fs-sm: clamp(1.2rem, 1.22rem + 0.18vh, 1.4rem);
+		--fs-base: clamp(1.4rem, 1.536rem + 0.18vw, 1.6rem);
+		--fs-md: clamp(1.6rem, 1.776rem + 0.71vw, 1.8rem);
+		--fs-lg: clamp(1.8rem, 2rem + 1.07vw, 2.4rem);
+		--fs-xl: clamp(2.4rem, 2.22rem + 1.79vw, 3.2rem);
+		--fs-2xl: clamp(3.2rem, 2.4rem + 2vw, 4rem);
+		--fs-3xl: clamp(4rem, 2.6rem + 2.4vw, 4.8rem);
+	}
+
+	// font weight
+	--fw-thin: 100;
+	--fw-extra-light: 200;
+	--fw-light: 300;
+	--fw-normal: 400;
+	--fw-medium: 500;
+	--fw-semibold: 600;
+	--fw-bold: 700;
+	--fw-extrabold: 800;
+	--fw-black: 900;
+}
+
+body {
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.6;
+	font-size: var(--fs-base);
+	font-family: var(--ff-body);
+	font-weight: var(--fw-normal);
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--ff-headings);
+}

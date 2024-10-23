@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+	height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+	-webkit-font-smoothing: antialiased;
+	min-height: 100vh;
+	line-height: 1.5;
+	text-rendering: optimizeSpeed;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas {
+	display: block;
+	max-width: 100%;
+}
+
+/*
+  Fix alignment broken by svg line height
+*/
+svg {
+	line-height: 0;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+	outline: none;
+	border: none;
+	background-color: inherit;
+	color: inherit;
+	font-size: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	-webkit-tap-highlight-color: transparent;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+a {
+	color: inherit;
+	font-weight: 500;
+}
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+li {
+	margin-left: var(--spacing-lg);
+}
+
+/* 
+  Remove all animations, transitions and smooth scroll for people that prefer not to see them
+*/
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

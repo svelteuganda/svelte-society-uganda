@@ -1,0 +1,50 @@
+@use './reset';
+@use './variables';
+@use './typography';
+@use './theme';
+@use './ui';
+
+.sr-only {
+	clip: rect(0, 0, 0, 0);
+	position: absolute;
+	margin: -1px;
+	border-width: 0;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.aspect-ratio-16x9 {
+	width: 100%; /* Set the container width to 100% to make it responsive */
+	padding-bottom: 56.25%; /* Maintain a 16x9 aspect ratio (16/9 = 1.7778 or 56.25%) */
+	position: relative; /* Position relative for absolute positioning of img */
+	overflow: hidden; /* Hide any overflow content from the image */
+
+	img {
+		position: absolute; /* Position the image absolutely within the container */
+		width: 100%; /* Make the image fill the container width */
+		height: 100%; /* Make the image fill the container height */
+		object-fit: cover; /* Ensure the image covers the container, cropping if necessary */
+		top: 0; /* Position the image at the top within the container */
+		left: 0; /* Position the image at the left within the container */
+	}
+}
+
+/* CSS styles for a 3:2 aspect ratio */
+.aspect-ratio-4x3 {
+	width: 100%;
+	padding-bottom: 66.67%; /* 3:2 aspect ratio (2 / 3 * 100%) */
+	position: relative;
+	overflow: hidden;
+
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		top: 0;
+		left: 0;
+	}
+}

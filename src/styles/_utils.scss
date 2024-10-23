@@ -1,0 +1,92 @@
+// BREAKPOINTS
+$breakpoints: (
+	'md-screens': 768px,
+	'lg-screens': 1024px,
+	'xl-screens': 1280px,
+	'xxl-screens': 1536px
+);
+
+@mixin respond-to($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media (min-width: map-get($breakpoints, $breakpoint)) {
+			@content;
+		}
+	} @else {
+		@warn "Breakpoint `#{$breakpoint}` not found in $breakpoints map.";
+	}
+}
+
+// Z INDEX
+$z-layers: (
+	'max': 9999,
+	'fullscreen': 2200,
+	'loader': 2000,
+	'drawer': (
+		'nav': 1900,
+		'base': 1800
+	),
+	'header': (
+		'nav': 1900,
+		'base': 1800
+	),
+	'fab': 1700,
+	'hero': (
+		'btns': 600,
+		'content': 500,
+		'overlay': 400,
+		'image': 300
+	),
+	'base': (
+		'base-200': 200,
+		'base-100': 100,
+		'base': 50
+	)
+);
+
+@function map-deep-get($map, $keys...) {
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+
+	@return $map;
+}
+
+@function z($layer, $sub-layer: null) {
+	@if not map-has-key($z-layers, $layer) {
+		@warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+	}
+
+	@if $sub-layer {
+		@return map-deep-get($z-layers, $layer, $sub-layer);
+	}
+
+	@return map-deep-get($z-layers, $layer);
+}
+
+@mixin add-section-lr-padding {
+	padding: {
+		right: 32px;
+		left: 32px;
+	}
+
+	@include respond-to('md-screens') {
+		padding: {
+			right: 32px;
+			left: 32px;
+		}
+	}
+
+	@include respond-to('lg-screens') {
+		padding: {
+			right: 96px;
+			left: 96px;
+		}
+	}
+
+	@include respond-to('xl-screens') {
+		padding: {
+			right: 240px;
+			left: 240px;
+		}
+	}
+}
