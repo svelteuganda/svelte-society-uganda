@@ -26,11 +26,7 @@
 		}
 
 		&[aria-current='page'] {
-			color: var(--clr-txt-primary-on-bg-accent-1);
-
-			@include utils.respond-to('md-screens') {
-				color: var(--clr-accent-1);
-			}
+			color: var(--clr-accent-1);
 		}
 	}
 </style>

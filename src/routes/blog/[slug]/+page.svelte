@@ -11,22 +11,27 @@
 </script>
 
 <main>
-	<h1>{frontmatter.title}</h1>
-
 	<section class="content">
+		<h1>{frontmatter.title}</h1>
 		{@html html}
 	</section>
 </main>
 
 <style lang="scss">
 	main {
-		.thumbnail {
-			height: 100%;
-		}
-
+		margin: var(--spacing-lg) 0;
 		.content {
-			width: 50vw;
-			margin: 0 auto;
+			@include utils.add-section-lr-padding();
+
+			h1 {
+				font-size: var(--fs-2xl);
+			}
+
+			@include utils.respond-to('lg-screens') {
+				width: 50vw;
+				margin: 0 auto;
+				padding: 0;
+			}
 		}
 	}
 </style>

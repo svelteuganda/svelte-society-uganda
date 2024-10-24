@@ -8,7 +8,7 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import grayMatter from 'gray-matter';
 
-import { rehypeToc, rehypeCopyCode } from '$lib/server/markdown/plugins';
+import { rehypeCopyCode } from '$lib/server/markdown/plugins';
 
 function searchAndReplace(markdown: string): string {
 	const pattern = /{%\s*file\s*"([^"]+)"\s*%}/g;
@@ -36,7 +36,7 @@ export default async <F>(markdown: string) => {
 		.use(rehypeStringify, { allowDangerousHtml: true })
 		.use(rehypeSlug)
 		.use(rehypeAutolinkHeadings, { behavior: 'append' })
-		.use(rehypeToc)
+		// .use(rehypeToc)
 		.use(rehypeCopyCode)
 		.process(searchAndReplace(content));
 

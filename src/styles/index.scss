@@ -3,6 +3,7 @@
 @use './typography';
 @use './theme';
 @use './ui';
+@use './code';
 
 .sr-only {
 	clip: rect(0, 0, 0, 0);

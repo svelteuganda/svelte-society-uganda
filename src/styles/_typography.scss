@@ -1,13 +1,18 @@
 @use './utils';
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
 	// font-family
-	--ff-display: 'Ubuntu', serif;
-	--ff-mono: monospace;
-	--ff-sans: 'Montserrat', Helvetica, Arial, sans-serif;
-
-	--ff-headings: 'Ubuntu', serif;
-	--ff-body: 'Montserrat', Helvetica, Arial, sans-serif;
+	--ff-display: 'Playfair Display', serif;
+	--ff-mono: 'JetBrains Mono', monospace;
+	--ff-sans: 'Raleway', Helvetica, Arial, sans-serif;
+	--ff-headings: 'Playfair Display', serif;
+	--ff-body: 'Raleway', Helvetica, Arial, sans-serif;
 
 	// font-size
 	font-size: 62.5%;
@@ -73,4 +78,16 @@ h4,
 h5,
 h6 {
 	font-family: var(--ff-headings);
+}
+
+h1 {
+	font-size: var(--fs-2xl);
+}
+
+h2 {
+	font-size: var(--fs-lg);
+}
+
+h3 {
+	font-size: var(--fs-md);
 }

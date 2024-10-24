@@ -7,8 +7,6 @@ tags:
   - svelte
 ---
 
-# Introduction to svelte 5
-
 ## What changed
 
 ### Syntax
