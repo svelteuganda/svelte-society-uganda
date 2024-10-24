@@ -6,5 +6,14 @@ export default defineConfig({
 
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
+	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				additionalData: `
+	        @use 'src/styles/utils';
+	      `
+			}
+		}
 	}
 });
