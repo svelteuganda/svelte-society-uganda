@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 
+	import { Seo } from '$lib/components';
+
 	interface Props {
 		data: PageData;
 	}
@@ -9,6 +11,8 @@
 
 	const { html, frontmatter } = data;
 </script>
+
+<Seo title={frontmatter.title} description={frontmatter.description} />
 
 <main>
 	<section class="content">

@@ -166,8 +166,8 @@
 		justify-content: space-between;
 		padding-top: var(--spacing-sm);
 		padding-bottom: var(--spacing-sm);
-		@include utils.add-section-lr-padding();
 		background-color: var(--clr-bg-secondary);
+		@include utils.add-section-lr-padding();
 
 		&__logo {
 			display: flex;
@@ -212,11 +212,11 @@
 			width: 100vw;
 			height: fit-content;
 			overflow: hidden;
-			@include utils.add-section-lr-padding();
 			padding: {
 				top: var(--spacing-md);
 				bottom: var(--spacing-md);
 			}
+			@include utils.add-section-lr-padding();
 
 			@include utils.respond-to('lg-screens') {
 				position: static;

@@ -5,7 +5,7 @@
 <Seo title="Home" description="" />
 
 <main>
-	<h1>Home</h1>
+	<h1>Connecting Svelte Enthusiasts in Uganda.</h1>
 </main>
 
 <style lang="scss">
