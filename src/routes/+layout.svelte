@@ -60,7 +60,7 @@
 	<nav class="header__nav" class:open={openNav}>
 		<NavLink href="/" name="Home" />
 		<NavLink href="/blog" name="Blog" />
-		<NavLink href="/project-showcase" name="Project showcase" />
+		<NavLink href="/showcase" name="Showcase" />
 		<NavLink href="/about-us" name="About us" />
 		<NavLink href="/events" name="Events" />
 

@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 
+	import { Seo } from '$lib/components';
+
 	interface Props {
 		data: PageData;
 	}
@@ -9,6 +11,8 @@
 
 	const { posts } = data;
 </script>
+
+<Seo title="Blog" description="" />
 
 <main>
 	<h1>Blog</h1>
@@ -25,3 +29,9 @@
 		</div>
 	</section>
 </main>
+
+<style lang="scss">
+	main {
+		min-height: calc(100vh - var(--header-height));
+	}
+</style>
