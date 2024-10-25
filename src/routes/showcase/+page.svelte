@@ -2,10 +2,10 @@
 	import { Seo } from '$lib/components';
 </script>
 
-<Seo title="Home" description="" />
+<Seo title="Showcase" description="" />
 
 <main>
-	<h1>Connecting Svelte Enthusiasts in Uganda.</h1>
+	<h1>Showcase</h1>
 </main>
 
 <style lang="scss">

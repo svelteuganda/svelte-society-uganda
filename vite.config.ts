@@ -3,8 +3,20 @@ import { sveltekit } from '@sveltejs/kit/vite';
 
 export default defineConfig({
 	plugins: [sveltekit()],
-
+	server: {
+		host: '0.0.0.0',
+		port: 5004
+	},
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
+	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				additionalData: `
+	        @use 'src/styles/utils';
+	      `
+			}
+		}
 	}
 });
